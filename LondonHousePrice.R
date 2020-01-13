@@ -132,6 +132,7 @@ indvardf[6] <- log(indvardf$`Land Area`)
 cormat <- cor(indvardf[,1:6], use="complete.obs", method="pearson")
 corrplot(cormat,type="lower")
 VIF <- vif(LRModel)
+VIF
 #this step will test the residuals independent
 #firstly we will observe the residual distribution in London
 LRMResidualPlot <- tm_shape(MSOAHousePriceMap) +
