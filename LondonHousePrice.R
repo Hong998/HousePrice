@@ -72,6 +72,7 @@ MSOAHousePriceMap1 <- tm_shape(MSOAHousePriceMap) +
   tm_layout(title="2011 London House Price Map")+
   tm_legend(position=c("left", "bottom"))
 MSOAHousePriceMap1
+
 #Now we can visualise the frequency distribution by histogram
 colnames(MSOAHousePriceMap)[9] <- "House Price"
 hist1 <- ggplot(MSOAHousePriceMap, aes(x=`House Price`)) +
