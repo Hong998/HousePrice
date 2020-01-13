@@ -28,6 +28,7 @@ LondonMSOA <- st_read("LondonMap/statistical-gis-boundaries-london/ESRI/MSOA_201
 BNG = "+init=epsg:27700"
 MSOAHousePrice <- MSOAHousePrice[MSOAHousePrice$Year=="Year ending Dec 2011"&MSOAHousePrice$Measure=="Mean",]
 MSOAHousePrice$Price <- as.numeric(MSOAHousePrice$Price)
+
 #download the MSOA data
 MSOAdata <- read_csv("https://data.london.gov.uk/download/msoa-atlas/20264159-36cb-4aa2-8371-ae884ae83e88/msoa-data.csv", col_names = TRUE, locale = locale(encoding = 'Latin1'))
 #delete the last row, which is the average value for every column
